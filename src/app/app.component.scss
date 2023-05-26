@@ -34,5 +34,10 @@
 
 .bottom-section {
     background-color: coral;
+    display: flex;
+
+    app-tabs {
+        margin: auto;
+    }
 
 }

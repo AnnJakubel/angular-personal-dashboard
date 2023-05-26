@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+//Mini reset
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+//Inter font
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Quicksand&display=swap');
+//Bookmark icon
+@import url('https://fonts.googleapis.com/css?family=Material+Icons+Outlined');
+
 
 html {
     font-family: 'Inter', sans-serif;
