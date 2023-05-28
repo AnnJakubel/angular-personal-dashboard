@@ -13,6 +13,9 @@
 
 .tab {
     position: relative;
+
+    text-decoration: none;
+
     z-index: 1;
 }
 
@@ -26,9 +29,24 @@
         color: #222;
 
     }
+
+    //when transitioning out of selected state
+    transition: all 0.2s;
 }
 
-.tab-tile::before {
+.tab.selected .tab-tile {
+    transform: translateY(-28px);
+
+    box-shadow: 0px 4px 12px rgba(black, 0.4);
+    border-radius: 50%;
+
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 2);
+}
+
+//styles for the tab tile background shape
+
+.tab-tile::before { 
     content: '';
     position: absolute;
     top: 0;
@@ -60,3 +78,11 @@
     transform: scale(1.1);
     opacity: 1;
 }
+
+.tab.selected .tab-tile::before {
+    border-radius: 50%;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+//end of tab tile background shape styles
