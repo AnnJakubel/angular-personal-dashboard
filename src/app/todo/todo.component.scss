@@ -17,7 +17,7 @@
 }
 
 .todo-text {
-    color: rgba(white, 0.9);
+    color: rgba(white, 0.85);
 }
 
 .check-box {
@@ -38,11 +38,30 @@
 
 .todo-item:hover {
     .todo-text {
-        color: white;
+        color: rgba(white, 0.95);
     }
 
     .check-box {
         border-color: transparent;
         background-color: rgba(white, 0.35);
     }
+}
+
+.todo-item.completed {
+    .todo-text {
+        color: rgba(white, 0.78);
+    }
+
+    .check-box {
+        background: rgb(9, 218, 89);
+        border-color: transparent;
+
+        i {
+            opacity: 1;
+        }
+    }
+}
+
+.todo-text, .check-box {
+    transition: 0.12s;
 }
