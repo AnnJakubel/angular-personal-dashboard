@@ -1,4 +1,4 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, query, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -9,6 +9,15 @@ import { RouterOutlet } from '@angular/router';
   animations: [
     trigger('routeAnim', [
       transition('* => *', [
+        query(':enter', [
+          style({
+            background: 'wheat',
+            display: 'block',
+            height: '100%'
+          }),
+          animate(1000)
+        ], { optional: true }),
+
         style({
           background: 'blue'
         }),
