@@ -1,4 +1,4 @@
-import { trigger } from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -8,6 +8,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeAnim', [
+      transition('* => *', [
+        style({
+          background: 'blue'
+        }),
+        animate(1000)
+      ])
 
     ])
   ]

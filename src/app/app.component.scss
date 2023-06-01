@@ -34,6 +34,8 @@
 .content-section {
     //background-color: cadetblue;
     flex-grow: 1; //grows to maximum size of free space
+    margin-left: 20px;
+    margin-right: 20px;
     min-height: 0;
 }
 
