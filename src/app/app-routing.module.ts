@@ -5,9 +5,9 @@ import { TodoComponent } from './todo/todo.component';
 import { NotesComponent } from './notes/notes.component';
 
 const routes: Routes = [
-  { path: 'bookmarks', component: BookmarksComponent },
-  { path: 'todo', component: TodoComponent },
-  { path: 'notes', component: NotesComponent }
+  { path: 'bookmarks', component: BookmarksComponent, data: { tab: 1 } },
+  { path: 'todo', component: TodoComponent, data: { tab: 2 }  },
+  { path: 'notes', component: NotesComponent, data: { tab: 3 }  }
 ];
 
 @NgModule({
