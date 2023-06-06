@@ -1,14 +1,14 @@
 <div class="add-note-wrapper container has-blurred-white-bg">
     <h2 class="is-bold">New Note</h2>
 
-    <form>
-        <input type="text" class="textbox" placeholder="Enter note title...">
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+        <input type="text" class="textbox" ngModel name="title" placeholder="Enter note title...">
 
-        <textarea class="textarea" placeholder="Enter note content..."></textarea>
+        <textarea class="textarea" ngModel name="content" placeholder="Enter note content..."></textarea>
 
         <div class="btns-container">
             <a routerLink="../" class="btn">Cancel</a>
-            <button class="btn align-end">Create Note</button>
+            <button type="submit" class="btn align-end">Create Note</button>
             <!-- "../"" means one relative root back-->
         </div>
     </form>
