@@ -6,7 +6,10 @@ import { Note } from './note.model';
 })
 export class NoteService {
 
-  notes: Note[] = [];
+  notes: Note[] = [
+    new Note('Test title', 'Test content!'),
+    new Note('Test title2', 'Testin one two three')
+  ]
 
 
   constructor() { }
@@ -26,7 +29,7 @@ export class NoteService {
 
   updateNote(id: string, updatedFields: Partial<Note>) {
     const note = this.getNote(id);
-    Object.assign(note, updatedFields);
+    Object.assign(note || {}, updatedFields);
   }
 
   deleteNote(id: string) {

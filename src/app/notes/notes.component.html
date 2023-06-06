@@ -4,9 +4,9 @@
 
         <div class="notes-list">
 
-            <div class="note-card">
-                <div class="note-card-title">This is the note title!</div>
-                <div class="note-card-content">I am the note content.</div>
+            <div class="note-card" *ngFor="let note of notes">
+                <div class="note-card-title">{{ note.title }}</div>
+                <div class="note-card-content">{{ note.content }}</div>
             </div>
 
         </div>
