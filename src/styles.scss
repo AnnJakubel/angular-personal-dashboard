@@ -9,6 +9,7 @@
 
 html {
     font-family: 'Inter', sans-serif;
+    color: #222;
 }
 
 html, body {
@@ -20,7 +21,13 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+h1.is-bold,
+h2.is-bold {
+    font-weight: bold;
 }
 
 .container {
@@ -39,7 +46,9 @@ h2 {
     color: white;
     font-size: 18px;
     font-weight: 600;
+    font-family: inherit;
 
+    border: none;
     border-radius: 4px;
 
     cursor: pointer;
@@ -61,4 +70,49 @@ h2 {
     &.btns-centered {
         justify-content: center;
     }
+
+    .align-end {
+        margin-left: auto;
+    }
+}
+
+.has-blurred-white-bg {
+    background: rgba(white, 0.85);
+    backdrop-filter: blur(2px);
+}
+
+.textbox,
+.textarea {
+    display: block;
+    font-size: 15px;
+    font-family: inherit;
+
+    border: 2px solid rgba(black, 0.3);
+    border-radius: 4px;
+
+    background-color: rgba(white, 0.85);
+
+    padding: 8px 10px;
+    margin-bottom: 20px;
+
+    width: 100%;
+
+    &:hover {
+        background: rgba(white, 0.95);
+    }
+
+    &:focus {
+        background: white;
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: rgba(black, 0.24);
+    }
+}
+
+.textarea {
+    min-height: 100px;
+    resize: vertical;
 }
