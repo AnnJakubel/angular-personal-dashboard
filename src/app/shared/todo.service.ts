@@ -5,11 +5,16 @@ import { Todo } from './todo.model';
   providedIn: 'root'
 })
 export class TodoService {
-  todos: Todo[] = [];
+  todos: Todo[] = [
+    new Todo('This is a test!'),
+    new Todo('Hey!'),
+    new Todo('Finish this application')
+  ];
 
   constructor() {
-
+    
   }
+  
 
   getTodos() {
     return this.todos;
@@ -23,7 +28,7 @@ export class TodoService {
     this.todos.push(todo);
   }
 
-  updateTodo(id: string, updatedTodoFields: Partial<Todo>): Todo {
+  updateTodo(id: string, updatedTodoFields: Partial<Todo>) {
     const todo = this.getTodo(id);
     Object.assign(todo, updatedTodoFields);
   }
@@ -35,3 +40,5 @@ export class TodoService {
     this.todos.splice(index, 1);
   }
 }
+
+
